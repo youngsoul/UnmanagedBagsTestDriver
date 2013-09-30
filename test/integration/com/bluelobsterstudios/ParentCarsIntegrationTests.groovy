@@ -109,7 +109,7 @@ class ParentCarsIntegrationTests {
 
     println "Before deleteAll cars associated with parent"
     parent.deleteAllCars()
-    println "Before deleteAll cars associated with parent"
+    println "After deleteAll cars associated with parent"
 
 
     println "Before count of Parent and Car objects and the parents cars"
