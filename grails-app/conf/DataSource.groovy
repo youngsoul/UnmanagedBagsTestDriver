@@ -22,6 +22,10 @@ environments {
             dbCreate = "update"
             url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
+      hibernate {
+        show_sql = true
+        hibernate.format_sql = true
+      }
     }
     production {
         dataSource {

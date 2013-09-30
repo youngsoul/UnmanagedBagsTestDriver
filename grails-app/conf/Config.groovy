@@ -89,3 +89,7 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+// setting default gorm behavior
+grails.gorm.autoFlush = true
+grail.gorm.failOnError = true
