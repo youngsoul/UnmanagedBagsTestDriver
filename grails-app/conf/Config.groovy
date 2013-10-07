@@ -91,5 +91,8 @@ log4j = {
 }
 
 // setting default gorm behavior
+grails.gorm.default.mapping = {
+  version false
+}
 grails.gorm.autoFlush = true
 grail.gorm.failOnError = true

@@ -7,6 +7,9 @@ class Asset {
 
   static hasUnmanagedBags = [ tags: [childClass: Tag, parentFKPropertyName: 'belongsToId', parentKeyPropertyName: 'assetId'] ]
 
+  static mapping = {
+    tablePerHierarchy(false)
+  }
   static constraints = {
   }
 

@@ -11,7 +11,7 @@ class Parent {
 
     // always a list of either a Class OR a Map
     static hasUnmanagedBags = [
-            cars: com.bluelobsterstudios.Car, animals:[parentFKPropertyName: "ownerFkId", childClass: Pet]
+            cars: Car, animals:[parentFKPropertyName: "ownerFkId", childClass: Pet]
     ]
 
     String name
