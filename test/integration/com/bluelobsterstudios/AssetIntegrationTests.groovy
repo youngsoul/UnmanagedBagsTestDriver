@@ -18,14 +18,18 @@ class AssetIntegrationTests {
   @Test
   void testAssetTags() {
 
+    println "Before Asset save"
     Asset asset1 = new Asset(label: "Asset 1")
     assertNotNull asset1.save()
+    println "After Asset save"
 
+    println "Before create 10 Tag objects and add them to Asset"
     Tag tag = null
     10.times { i ->
       tag = new Tag(name: "Tag $i")
       asset1.addToTags(tag)
     }
+    println "After create 10 Tag objects and add them to Asset"
 
     println "Before count of Asset and Tag objects"
     assertEquals 1, Asset.count
@@ -33,7 +37,9 @@ class AssetIntegrationTests {
     assertEquals 10, asset1.getTags().size()
     println "After count of Asset and Tag objects"
 
+    println "Before find Assets by Tag object in list"
     def x = Asset.findAllByTagInList([tag])
+    println "After find Assets by Tag object in list"
     assertNotNull x
     assertEquals x[0].id, asset1.id
   }
